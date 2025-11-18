@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Atalho para formatar o codigo SHIFT E ALT E F ao mesmo tempo -->
+    <h1>Formulários</h1>
+    <!-- method pode ser GET ou POST -->
+    <form action="registro.php" method="GET">
+
+        <!-- atributo name -->
+        <div>
+            <label>Nome:</label>
+            <input type="text" name="nome">
+        </div>
+
+        <!-- atributo Label -->
+        <div>
+            <label for="idade"> Idade</label>
+            <input type="text" name="idade">
+        </div>
+
+        <!-- select -->
+        <div>
+            <label for="cidade"> Selecione sua cidade:</label>
+            <select name="cidade">
+                <option value="São Paulo">São Paulo</option>
+                <option value=" Taboão da Serra">Taboão da Serra</option>
+                <option value="Osasco" selected>Osasco</option>
+            </select>
+
+            <div>
+                <br>
+                <label for="feedback">Descreva o seu feedbak sobre o nosso site</label>
+                <textarea name="feedback"></textarea>
+            </div>
+
+            <!-- password / senha -->
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha">
+            </div>
+
+            <!-- input de email -->
+            <div>
+                <label for="emailinserido">Insira o seu e-mail</label>
+                <input type="email" name="emailinserido">
+            </div>
+        </div>
+
+        <!-- Input form -->
+        <div>
+            <br>
+            <label for="arquivo">Insira o seu curriculo em PDF</label>
+            <br>
+            <input type="file" name="arquivo">
+        </div>
+
+        <!-- Input Radio -->
+        <div>
+            <label for="genero">Qual seu gênero</label>
+            <div class="radio">
+                <input type="radio" value="Feminino" name="genero">
+                <label for="Feminino">Feminino</label>
+            </div>
+            <div>
+                <div class="radio">
+                    <input type="radio" value="Masculino" name="genero">
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div>
+                    <div class="radio">
+                        <input type="radio" value="naoopinou" name="genero">
+                        <label for="naoopinou">Prefiro não responder</label>
+                    </div>
+                </div>
+
+                <!-- Input Checbox -->
+                <div>
+                    <label for="linguasestrangeiras">Quais linguas pretende estudar:</label>
+                    <div class="radio">
+                        <input type="checkbox" name="linguasestrangeiras[]" value="ingles">
+                        <label for="ingles">Ingles</label>
+                    </div>
+
+                    <div class="radio">
+                        <input type="checkbox" name="linguasestrangeiras[]" value="espanhol">
+                        <label for="espanhol">espanhol</label>
+                    </div>
+
+                    <div class="radio">
+                        <input type="checkbox" name="linguasestrangeiras[]" value="alemao">
+                        <label for="alemao">Alemão</label>
+                    </div>
+
+                    <!-- Input data -->
+                    <div>
+                        <label for="datanascimento">Data de Nacimento</label>
+                        <input type="date" name="datanascimento">
+                    </div>
+
+                    <!-- Input Number -->
+                    <div>
+                        <label for="certificados">Quantos certificados voce possui?</label>
+                        <input type="number" name="certificados">
+                    </div>
+                </div>
+                <!-- Atributo placeholder -->
+                <div>
+                    <label for="pesquisa">Como achou o nosso site?</label>
+                    <input type="text" name="pesquisa" placeholder="No google ou instagram">
+                </div>
+
+                <!-- Atributo Required -->
+                <div>
+                    <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+                </div>
+
+                <!-- Limpando/resetando o formulario -->
+                 <input type="reset" value="Limpar">
+                  <br>
+
+                <!-- SUBMIT BOTÃO -->
+                <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
